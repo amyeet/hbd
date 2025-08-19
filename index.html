@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Secret!!! 🎂🎉</title>
@@ -27,8 +28,15 @@
     }
 
     @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
     }
 
     .fancy-btn {
@@ -40,14 +48,14 @@
       border: none;
       border-radius: 30px;
       cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       transition: transform 0.2s, box-shadow 0.2s;
       font-family: 'Baloo 2';
     }
 
     .fancy-btn:hover {
       transform: scale(1.1);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
 
     .hidden {
@@ -77,8 +85,15 @@
     }
 
     @keyframes float {
-      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-      100% { transform: translateY(-110vh) rotate(20deg); opacity: 0; }
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-110vh) rotate(20deg);
+        opacity: 0;
+      }
     }
 
     canvas {
@@ -91,45 +106,58 @@
     /* Floating secret button */
     #secretBtn {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 30px;
+      right: 30px;
       background: linear-gradient(45deg, #ff66cc, #ffccff);
-      padding: 15px 25px;
-      border-radius: 50px;
+      padding: 25px 40px;
+      /* bigger padding */
+      border-radius: 70px;
+      /* bigger, rounder pill */
       border: none;
-      font-size: 1.2rem;
+      font-size: 2rem;
+      /* bigger font */
       color: white;
       cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
       animation: floaty 2s infinite ease-in-out;
       display: none;
       font-family: 'Pacifico', cursive;
     }
 
     @keyframes floaty {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
     }
 
     /* Birthday message box */
     #messageBox {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-      max-width: 500px;
-      text-align: center;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      display: none;
-      color: #ff4d6d;
-    }
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px;               /* much bigger padding */
+    border-radius: 40px;         /* smoother corners */
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+    width: 70vw;                 /* take up most of the screen */
+    height: 65vh;                /* almost full height */
+    text-align: center;
+    font-size: 1.8rem;           /* bigger text */
+    line-height: 2.2;
+    display: none;
+    color: #ff4d6d;
+    overflow-y: auto;            /* scroll if too much text */
+  }
   </style>
 </head>
+
 <body>
   <!-- Step 1 -->
   <button id="btn1" class="fancy-btn">Click Me 🎁</button>
@@ -146,7 +174,11 @@
 
   <!-- Step 5: Birthday Message -->
   <div id="messageBox">
-    Happy Birthday, my love, my life, my wifie, my world 💖. Today is not just another day, it’s the most special day because it gave me you. You are the sparkle in my eyes, the warmth in my heart, and the reason every little moment feels magical. I wish for your days to be filled with endless laughter, sweet surprises, and dreams unfolding beautifully. You deserve the universe, and though I can’t give you that, I promise to give you all of me - my love, my care, my soul. May this year be as breathtaking as your smile. You’re my everything. Happy Birthday, jaan🎂🌹
+    Happy Birthday, my love, my life, my wifie, my world 💖. Today is not just another day, it’s the most special day
+    because it gave me you. You are the sparkle in my eyes, the warmth in my heart, and the reason every little moment
+    feels magical. I wish for your days to be filled with endless laughter, sweet surprises, and dreams unfolding
+    beautifully. You deserve the universe, and though I can’t give you that, I promise to give you all of me - my love,
+    my care, my soul. May this year be as breathtaking as your smile. You’re my everything. Happy Birthday, Jaan!!!!🎂🌹
   </div>
 
   <script>
@@ -175,7 +207,7 @@
       // After 6 sec, show secret button
       setTimeout(() => {
         secretBtn.style.display = "block";
-      }, 6000);
+      }, 3000);
     });
 
     // Secret button -> Show birthday message
@@ -249,4 +281,5 @@
     }
   </script>
 </body>
+
 </html>
